@@ -10,7 +10,6 @@ public class SynchronizedQueue<T> {
 	private int size;
 	private int start;
 	private int end;
-	// TODO: Add more private members here as necessary
 	
 	/**
 	 * Constructor. Allocates a buffer (an array) with the given capacity and
@@ -24,7 +23,6 @@ public class SynchronizedQueue<T> {
 		this.size = 0;
 		this.start= 0;
 		this.end= -1;
-		// TODO: Add more logic here as necessary
 	}
 	
 	/**
@@ -115,7 +113,6 @@ public class SynchronizedQueue<T> {
 	 * @see #unregisterProducer()
 	 */
 	synchronized public void registerProducer() {
-		// TODO: This should be in a critical section
 		this.producers++;
 		this.notify();
 	}
@@ -127,7 +124,6 @@ public class SynchronizedQueue<T> {
 	 * @see #registerProducer()
 	 */
 	synchronized public void unregisterProducer() {
-		// TODO: This should be in a critical section
 		this.producers--;
 		this.notify();
 	}
